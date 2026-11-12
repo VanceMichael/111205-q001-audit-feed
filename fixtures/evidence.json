@@ -1,0 +1,36 @@
+{
+  "review_batch": "review-1",
+  "inputs": [
+    {
+      "id": "list-1",
+      "file": "pages.json",
+      "locator": "/rounds/0/items/0/title"
+    },
+    {
+      "id": "detail-1",
+      "file": "notices.html",
+      "locator": "li[data-id=\"42\"] a"
+    }
+  ],
+  "derived": {
+    "conclusion": {
+      "depends_on": [
+        "list-1",
+        "detail-1"
+      ],
+      "rule": "compare-subject-and-date"
+    }
+  },
+  "redaction": [
+    {
+      "field": "contact",
+      "reason": "reviewer-copy-only"
+    }
+  ],
+  "fault_cases": [
+    "missing-detail",
+    "tampered-raw",
+    "stale-locator",
+    "interrupted-export"
+  ]
+}

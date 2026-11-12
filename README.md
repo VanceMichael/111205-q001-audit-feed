@@ -1,8 +1,8 @@
-# 审计线索订阅的可追溯采集
+# 公告采集字段的可复核证据包
 
 ## 现有能力
 
-单条公告规范化；fixtures 中保留 JSON 分页、HTML 列表和相同公告的修订样本。尚无持久化版本链、采集编排或审计查询。
+当前提供公告规范化函数、JSON/HTML 原文和证据关系样本；未实现字段定位追踪、证据闭包导出、遮盖和离线复核。
 
 `service.py` 与根目录 `test_service.py` 保留现有接口和回归测试。`tests/test_baseline.py` 同时加载原测试和离线演示测试，不替换或跳过原断言。`demo.py` 只展示当前底座，不代表待开发工作流已经完成。
 
@@ -19,6 +19,6 @@ python3 demo.py
 
 ## 扩展边界
 
-材料：fixtures/pages.json、fixtures/notices.html 是本地合成响应；demo.py 仅演示现有单条规范化。无外部附件或选中代码。
+材料说明：fixtures/pages.json 与 fixtures/notices.html 为合成公告，fixtures/evidence.json 给出跨页面证据关系和遮盖范围。demo.py 仍只展示规范化函数；无外部附件或选中代码。
 
 当前测试只保证既有底座行为。新增流程仍需覆盖任务要求中的中断、重复、并发和人工边界，不应将底座演示作为完成证明。
