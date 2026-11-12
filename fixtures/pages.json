@@ -1,0 +1,38 @@
+{
+  "sources": {
+    "a": {
+      "format": "json",
+      "timezone": "+08:00"
+    },
+    "b": {
+      "format": "html",
+      "timezone": "-05:00"
+    }
+  },
+  "rounds": [
+    {
+      "page": 1,
+      "next": 2,
+      "items": [
+        {
+          "source": "a",
+          "notice_id": " 42 ",
+          "title": " 调查公告 ",
+          "published_at": "2026-11-11T08:00:00+08:00"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "next": null,
+      "items": [
+        {
+          "source": "a",
+          "notice_id": "42",
+          "title": "调查公告（修订）",
+          "published_at": "2026-11-11T09:00:00+08:00"
+        }
+      ]
+    }
+  ]
+}
